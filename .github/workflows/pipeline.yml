@@ -17,9 +17,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: check out code
-        uses: jonnekaunisto/isitup-action
+        uses: actions/is-my-site-up@v1.1
         with:
-          DOMAIN: www.google.com
+          site: www.google.com
           
 
 
