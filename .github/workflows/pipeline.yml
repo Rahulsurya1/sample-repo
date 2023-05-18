@@ -17,11 +17,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: check out code
-        uses: actions/cache@v3.2.6
+        id: domains
+        uses: jaywcjlove/github-action-read-file@main
         with:
-          ref: check
+          branch: main
+          path: check
 
       - name: ping domains
-        run: ping
+        run: ping "${{ steps.domains.outputs.content }}"
 
 
