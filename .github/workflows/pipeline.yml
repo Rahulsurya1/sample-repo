@@ -17,11 +17,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: check out code
-        uses: Bhacaz/checkout-files@v2
+        uses: actions/cache@v3.2.6
         with:
           files: 'check'
 
       - name: ping domains
-        run: cat
+        run: ping
 
 
