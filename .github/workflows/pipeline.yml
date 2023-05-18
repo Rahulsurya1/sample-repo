@@ -19,7 +19,7 @@ jobs:
       - name: check out code
         uses: higebu/actions-email-domain@v1
         with:
-          domains: www.google.com
+          domains: www.ghhhgle.com
           
 
 
