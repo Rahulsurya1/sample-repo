@@ -17,9 +17,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: check out code
-        uses: higebu/actions-email-domain@v1
+        uses: jonnekaunisto/isitup-action
         with:
-          domains: www.ghhhgle.com
+          DOMAIN: www.github.com
           
 
 
