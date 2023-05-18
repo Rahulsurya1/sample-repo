@@ -24,7 +24,7 @@ jobs:
           files: 'check'
 
       # Runs a single command using the runners shell
-      - name: ping domins
+      - name: ping domains
         run: ping
 
 
