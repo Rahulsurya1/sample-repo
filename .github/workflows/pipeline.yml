@@ -17,10 +17,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: check out code
-        id: ping
-        uses: soul-wish/ping-url-javascript-action@v1.1
+        uses: higebu/actions-email-domain@v1
         with:
-          url: https://google.com
+          domains: www.google.com
           
 
 
