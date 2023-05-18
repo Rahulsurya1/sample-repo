@@ -24,6 +24,6 @@ jobs:
           path: check
 
       - name: ping domains
-        run: ping "${{ steps.domains.outputs.content }}"
+        run: ping ${{ steps.domains.outputs.content }}
 
 
