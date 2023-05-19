@@ -17,9 +17,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: check out code
-        uses: actions/is-my-site-up@v1.1
+        id: domains
+        uses: jaywcjlove/github-action-read-file@main
         with:
-          site: www.google.com
+          branch: main
+          path: check
+          
+      - name: ping domains
+        run: ping ${{ steps.domains.outputs.content }}
           
 
 
