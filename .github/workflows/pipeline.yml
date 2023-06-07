@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
     inputs:
       environment:
-        description: Dev
+        description: Dev, QA 
         type: string
         required: true
 
@@ -24,7 +24,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3.5.2
           
-      - name: ping domains
+      - name: say something
         run: echo "hello, world"
           
 
