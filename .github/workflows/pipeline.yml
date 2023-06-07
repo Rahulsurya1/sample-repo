@@ -1,25 +1,12 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI-Ping
-
-# Controls when the workflow will run
+name: checking review system
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "main" ]
   workflow_dispatch:
-    inputs:
-      environment:
-        description: Dev 
-        type: string
-        required: true
-
-
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  DEV:
     runs-on: ubuntu-latest
+    environment: Dev
     steps:
       - name: Checkout
         uses: actions/checkout@v3.5.2
@@ -27,10 +14,10 @@ jobs:
       - name: say something
         run: echo "hello, world"
   
-Deploy:
-  runs-on: ubuntu-latest
-  needs: build
-  envirinment: Dev
+  QA:
+    runs-on: ubuntu-latest
+    environment: QA
+    needs: DEV
     steps:
       - name: Checkout
         uses: actions/checkout@v3.5.2
