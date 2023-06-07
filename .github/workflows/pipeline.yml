@@ -8,23 +8,24 @@ on:
   push:
     branches: [ "main" ]
   workflow_dispatch:
+    inputs:
+      environment:
+        description: Dev
+        type: string
+        required: true
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+
 jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     steps:
-      - name: check out code
-        id: domains
-        uses: jaywcjlove/github-action-read-file@main
-        with:
-          branch: main
-          path: check
+      - name: Checkout
+        uses: actions/checkout@v3.5.2
           
       - name: ping domains
-        run: ping ${{ steps.domains.outputs.content }}
+        run: echo "hello, world"
           
 
 
