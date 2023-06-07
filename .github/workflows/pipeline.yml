@@ -2,7 +2,8 @@
 
 name: checking review system
 on:
-  workflow_dispatch:
+  push:
+    branches: main
 jobs:
   DEV:
     runs-on: ubuntu-latest
