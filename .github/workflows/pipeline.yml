@@ -19,7 +19,7 @@ jobs:
           tag_prefix: "v"
           major_pattern: "BREAKING CHANGE:"
           minor_changes: "feat:"
-          format: "v${major}.${minor}.${patch}-release${increment}"
+          format: "v${major}.${minor}.${patch}-prerelease${increment}"
           
       - name: say something
         run: echo "hello world, This is Dev Environment - lets check"
