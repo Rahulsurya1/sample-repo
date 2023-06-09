@@ -11,6 +11,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3.5.2
+        
+      - name: Semantic versioning
+        uses: paulHatch/semantic-version@4.0.2
+        with:
+          branch: main
+          tag_prefix: "v"
+          major_pattern: "BREAKING CHANGE:"
+          minor_changes: "feat:"
+          format: "v${major}.${minor}.${patch}-release${increment}"
           
       - name: say something
         run: echo "hello world, This is Dev Environment - lets check"
