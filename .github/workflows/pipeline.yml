@@ -12,14 +12,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3.5.2
         
-      - name: Semantic versioning
-        uses: paulhatch/semantic-version@v5.0.2
+      - name: Bump version and push tag
+        uses: hennejg/github-tag-action@v4.1.jh1
         with:
-          branch: main
-          tag_prefix: "v"
-          major_pattern: "BREAKING CHANGE:"
-          minor_changes: "feat:"
-          format: "v${major}.${minor}.${patch}-prerelease${increment}"
+          github_token: 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
+        
+        
+       # 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
+        
+      #- name: Semantic versioning
+      #  uses: paulhatch/semantic-version@v5.0.2
+       # with:
+        #  branch: main
+         # tag_prefix: "v"
+          ##inor_changes: "feat:"
+          f#ormat: "v${major}.${minor}.${patch}-prerelease${increment}"
           
       - name: say something
         run: echo "hello world, This is Dev Environment - lets check"
