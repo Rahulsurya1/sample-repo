@@ -29,7 +29,7 @@ jobs:
           f#ormat: "v${major}.${minor}.${patch}-prerelease${increment}"
           
       - name: say something
-        run: echo "hello world, This is Dev Environment - lets check"
+        run: echo "hello world, This is Dev Environment - lets check now"
   
   QA:
     runs-on: ubuntu-latest
