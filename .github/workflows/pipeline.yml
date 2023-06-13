@@ -11,13 +11,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3.5.2
-        
-      - name: Bump version and push tag
-        uses: hennejg/github-tag-action@v4.1.jh1
-        with:
-          github_token: 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
-        
-        
+          
        # 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
         
       #- name: Semantic versioning
@@ -26,9 +20,8 @@ jobs:
         #  branch: main
          # tag_prefix: "v"
           ##inor_changes: "feat:"
-          f#ormat: "v${major}.${minor}.${patch}-prerelease${increment}"
           
-      - name: say something
+      - name: create dev folder
         run: mkdir Dev
   
   QA:
@@ -39,7 +32,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3.5.2
           
-      - name: say something
+      - name: create QA folder
         run: mkdir QA
       
   Pre-pod:
@@ -50,7 +43,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3.5.2
           
-      - name: say something
+      - name: create pre-prod folder
         run: mkdir pre-prod
      
      
