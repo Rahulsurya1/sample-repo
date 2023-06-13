@@ -5,24 +5,26 @@ on:
   push:
     branches: main
 jobs:
-  DEV:
+  review:
+    runs-on: self-hosted
+    environment: review
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.5.2
+ 
+      - name: azure view deployment changes
+        run: az deployment group what-if --resource-group newrg --template-file apim.bicep
+   
+  Dev:
     runs-on: self-hosted
     environment: Dev
     steps:
       - name: Checkout
         uses: actions/checkout@v3.5.2
-          
-       # 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
-        
-      #- name: Semantic versioning
-      #  uses: paulhatch/semantic-version@v5.0.2
-       # with:
-        #  branch: main
-         # tag_prefix: "v"
-          ##inor_changes: "feat:"
-          
-      - name: create dev fol
-        run: mkdir Dev
+ 
+      - name: azure view deployment changes
+        run: az deployment group create --resource-group newrg --template-file apim.bicep
+    
   
   QA:
     runs-on: self-hosted
