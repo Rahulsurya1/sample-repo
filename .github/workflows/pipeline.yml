@@ -21,7 +21,7 @@ jobs:
          # tag_prefix: "v"
           ##inor_changes: "feat:"
           
-      - name: create dev folder
+      - name: create dev fol
         run: mkdir Dev
   
   QA:
