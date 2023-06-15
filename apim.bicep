@@ -107,9 +107,6 @@ resource networkInterface 'Microsoft.Network/networkInterfaces@2021-05-01' = {
       {
         name: 'ipconfig1'
         properties: {
-          subnet: {
-            id: subnet.id
-          }
           privateIPAllocationMethod: 'Dynamic'
           publicIPAddress: {
             id: publicIPAddress.id
