@@ -167,7 +167,20 @@ resource networkSecurityGroup 'Microsoft.Network/networkSecurityGroups@2021-05-0
           destinationPortRange: '8899'
         }
       }
-    ]
+      {
+        name: 'app-Port3'
+        properties: {
+          priority: 1400
+          protocol: 'Tcp'
+          access: 'Allow'
+          direction: 'Inbound'
+          sourceAddressPrefix: '*'
+          sourcePortRange: '*'
+          destinationAddressPrefix: '*'
+          destinationPortRange: '7777'
+        }
+      }    
+]
   }
 }
 
