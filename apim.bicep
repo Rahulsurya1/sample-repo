@@ -131,7 +131,7 @@ resource networkSecurityGroup 'Microsoft.Network/networkSecurityGroups@2021-05-0
       {
         name: 'SSH'
         properties: {
-          priority: 1000
+          priority: 1001
           protocol: 'Tcp'
           access: 'Allow'
           direction: 'Inbound'
